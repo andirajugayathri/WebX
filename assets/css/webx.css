@@ -365,7 +365,7 @@
         }
 
          .webx-about-section {
-            padding: 40px 0;
+            padding: 100px 0;
             background: #fff;
         }
 
@@ -378,12 +378,12 @@
         .webx-about-image-large {
             position: absolute;
             top: 0;
-            right: 0;
-            width: 70%;
-            height: 450px;
+            right: -57px;
+            width: 100%;
+            height: 640px;
             overflow: hidden;
             border-radius: 8px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            /* box-shadow: 0 10px 40px rgba(0,0,0,0.1); */
         }
 
         .webx-about-image-large img {
@@ -392,16 +392,32 @@
             object-fit: cover;
         }
 
+        .webx-about-image-large::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(255, 255, 255, 0.3);
+            opacity: 1;  
+             transform: scale(0);       
+            transition: all 400ms linear;
+            pointer-events: none;height: 100%;
+            border-radius: 8px;
+        }
+        .webx-about-image-large:hover::after {
+            opacity: 0;
+            transform: scale(1);
+        }
+
         .webx-about-image-small {
             position: absolute;
-            bottom: 0;
             left: 0;
-            width: 60%;
-            height: 380px;
+            width: 47%;
+            height: 335px;
             overflow: hidden;
             border-radius: 8px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            /* box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1); */
             border: 8px solid #fff;
+            bottom: -52px;
         }
 
         .webx-about-image-small img {
@@ -409,9 +425,30 @@
             height: 100%;
             object-fit: cover;
         }
+         .webx-about-image-small::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(255, 255, 255, 0.3);
+            opacity: 1;  
+             transform: scale(0);       
+            transition: all 500ms linear;
+            pointer-events: none;height: 100%;
+            border-radius: 8px;
+        }
+        .webx-about-image-small:hover::after {
+            opacity: 0;
+            transform: scale(1);
+        }
 
         .webx-about-content {
-            padding-left: 40px;
+            top: 65px;
+            background-color: white;
+            width: 125%;
+            left: -99px;
+        }
+        .about-content1{
+            padding: 60px 60px 3px 60px;
         }
 
         .webx-about-label {
@@ -456,7 +493,7 @@
 
         .webx-about-stats {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             gap: 30px;
             margin-bottom: 20px;
         }
@@ -486,9 +523,9 @@
                 margin-bottom: 40px;
             }
 
-            .webx-about-content {
+            /* .webx-about-content {
                 padding-left: 15px;
-            }
+            } */
 
             .webx-about-title {
                 font-size: 32px;
@@ -517,12 +554,34 @@
             }
 
             .webx-about-stats {
-                grid-template-columns: 1fr;
-                gap: 20px;
+               grid-template-columns: repeat(2, 1fr);
+               gap: 20px;
+               padding: 0 20px;
             }
 
             .webx-about-stat-number {
                 font-size: 36px;
+            }
+            .about-content1{
+                padding: 30px 20px;
+            }
+            .webx-about-content {
+                top:auto;
+                background-color: white;
+                width: auto; 
+                 left: auto;
+            }
+             .webx-about-image-large {
+                    height: auto;
+            }
+            .webx-about-image-large {
+                position: absolute;
+                top: 0px;
+                right: 0;
+                width: 86%;
+                height: 640px;
+                overflow: hidden;
+                border-radius: 8px;
             }
         }
 
@@ -930,6 +989,7 @@
             color: #1a1a1a;
             padding: 16px 40px;
             text-decoration: none;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
             font-weight: 700;
             font-size: 15px;
             border-radius: 4px;
@@ -937,10 +997,10 @@
         }
 
         .webx-process-cta-btn:hover {
-            background: #fff;
+            background: #000;
             color: #fff;
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(255,107,61,0.3);
+            /* box-shadow: 0 8px 20px rgba(255,107,61,0.3); */
         }
 
         @media (max-width: 991px) {
@@ -1445,6 +1505,7 @@
 
             .webx-whyus-image {
                 min-height: 500px;
+                display: none;
             }
 
             .webx-whyus-overlay {
@@ -1463,6 +1524,9 @@
 
             .webx-whyus-overlay-footer-text {
                 font-size: 20px;
+            }
+            .pricing {
+                padding: 50px!important;
             }
         }
 
@@ -1618,7 +1682,10 @@
             .webx-portfolio-title {
                 font-size: 32px;
             }
-
+            .webx-portfolio-card-title{
+                font-size: 27px;
+            }
+    
             .webx-portfolio-subtitle {
                 font-size: 16px;
             }
@@ -1632,15 +1699,12 @@
                 height: 350px;
             }
 
-            .webx-portfolio-card-overlay {
-                transform: translateY(0);
-                background: linear-gradient(to top, rgba(255,107,61,0.95) 0%, rgba(255,107,61,0.7) 100%);
-            }
-
             .webx-portfolio-card-description {
                 opacity: 1;
                 transform: translateY(0);
             }
+            
+
         }
 
         .webx-testimonial-section {
@@ -1793,7 +1857,7 @@
 
         .webx-testimonial-card-stars i {
             font-size: 16px;
-            color: #fff;
+            color: gold;
         }
 
         .webx-testimonial-card-text {
@@ -2250,5 +2314,8 @@
             .pricing-grid{
                 grid-template-columns: auto;
             }
+        }
+        ul{
+            padding-left: 0;
         }
         
